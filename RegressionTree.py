@@ -32,10 +32,8 @@ class TreeNode:
         self.right_node = TreeNode(right_value)
         return self.left_node, self.right_node
 
-
 class RegressionTree:
     """ 回归树模型
-
     Attributes:
         tree: 回归树的头节点
         max_depth: 回归树的最大深度
@@ -68,7 +66,7 @@ class RegressionTree:
                     cost_function_temp += y_data[x_data[feature] >= value].apply(lambda x: (x - right_value_temp)**2).sum()
                 else:
                     left_value_temp = value
-                if cost_function == -1 or cost_function_temp < cost_function:
+                if cost_function == -1 or cost_function_temp < cost_function:        
                     split_feature = feature
                     split_value = value
                     left_value = left_value_temp
@@ -121,3 +119,4 @@ class RegressionTree:
                     node = node.right_node
             y_pred.append(node.leaf_value)
         return y_pred
+
