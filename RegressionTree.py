@@ -8,7 +8,7 @@
 from queue import Queue
 
 
-class TreeNode():
+class TreeNode:
     """ 回归树的分裂节点
 
     Attributes:
@@ -33,7 +33,7 @@ class TreeNode():
         return self.left_node, self.right_node
 
 
-class RegressionTree():
+class RegressionTree:
     """ 回归树模型
 
     Attributes:
